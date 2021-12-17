@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Reactmarkdown from 'react-markdown';
 import logo from './logo.svg';
 import './App.css';
-import reactMarkdown from 'react-markdown';
+
 
 function App() {
 
