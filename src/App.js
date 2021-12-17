@@ -1,17 +1,25 @@
+import React, {useState} from 'react';
+import Reactmarkdown from 'react-markdown';
 import logo from './logo.svg';
 import './App.css';
+import reactMarkdown from 'react-markdown';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          This is advanced projects123
-        </p>
-      </header>
-    </div>
-  );
+
+  const [markdown, setMarkdown] = useState('## markdown preview')
+  return <main>
+    <section className="markdown">
+      <textarea className="input" 
+      value={markdown}
+      onChange={(e) => setMarkdown(e.target.value)}></textarea>
+      <article className='result'>
+        <Reactmarkdown>
+        {markdown}
+        </Reactmarkdown>
+      </article>
+
+    </section>
+    </main>
 }
 
 export default App;
